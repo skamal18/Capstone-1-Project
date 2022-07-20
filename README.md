@@ -1,8 +1,7 @@
 # Carbon-Dioxide-Emissions
 # :earth_americas: Carbon-Dioxide Prediction Model :deciduous_tree:
 ## Data Science Project
-- For code go to [Notebooks](/notebooks)
-- For raw data go to [Data](/Data)
+- For code go to [Capstone1 Notebooks]
 
 ![Co2-Emissions-From-Cars](https://user-images.githubusercontent.com/98712279/180068465-e0789668-f025-493a-b0ec-bf37e302548e.jpeg)
 
