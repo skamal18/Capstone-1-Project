@@ -64,12 +64,13 @@ Nine different models were tried and test. Fine hyperparameter tuning on each of
 - **Support Vector Machine:** After performing gridsearch, the best parameters obtained for hyptertuning the model were:
 SVR(C=100, degree=2, epsilon=0.5, gamma=1, kernel='linear')
 
-- **K-Nearest Neighbors Regression:** Constructed an Elbow plot to determine the optimal value of K that yields lowest MSE. From the elbow plot, we deduced that the k-value of 7 yielded the lowest MSE.
+
 ![features_model](https://user-images.githubusercontent.com/98712279/180065245-b979ae74-2b43-420e-b83e-2934eba08318.png)
+- **K-Nearest Neighbors Regression:** Constructed an Elbow plot to determine the optimal value of K that yields lowest MSE. From the elbow plot, we deduced that the k-value of 7 yielded the lowest MSE.
 
 
-![scores](https://user-images.githubusercontent.com/98712279/180064098-833adce3-9b59-4dc9-8ffa-99b496b41e17.png)
-The Gradient Boosting Model, Decision Tree Regression and Random Forest Regression were the most accurate for predicting Carbon Dioxide Emissions!
+![scores](https://user-images.githubusercontent.com/98712279/180066146-8f35166a-a17b-4edf-875f-e700db1373fe.png)
+The Gradient Boosting Model, Decision Tree Regression and Random Forest Regression were the most accurate for predicting Carbon Dioxide Emissions and had a score of 0.83 each.
 
 **Conclusion**
 
