@@ -30,39 +30,43 @@ Discover if there is any relationship between different features
 
 
 ![CO2 Emissions](https://user-images.githubusercontent.com/98712279/179902500-b4addd4a-6607-4976-8465-3391d566c6ca.png)
+ This graphs shows the mean CO2 Emissions from each car brand used in Canada. 
 
-![Density1](https://user-images.githubusercontent.com/98712279/179903457-843149b8-53a9-428e-bbde-d66c0a48ad95.png)
 
-![KDE_Plot](https://user-images.githubusercontent.com/98712279/179903469-f2c385a2-bae6-41f8-a7f3-d046c4ac0671.png)
+![Fueltype_comb](https://user-images.githubusercontent.com/98712279/180002377-dd4daf12-bdf6-4e37-bf10-0b3d6b52a867.png)
+Ethanol has the lowest CO2 Emissions in comparison to other fuel types and highest fuel consumption. E85 contains 83% ethanol content and has about 27% less energy per gallon than gasoline so therefore it would consume more fuel in comparison to gasoline to go the same distance(L/km). In the city, vehicles make many stops and starts. Accelerating a vehicle from zero to even a slow speed like 30 or 40 km/h several times takes quite a bit more energy than accelerating a vehicle to 60 km/h and maintaining it. Using more energy means using more fuel to generate it, hence the city has higher fuel consumption.
 
-No one array was dragging the power plant down, but to double check we compared each array to the average for each day and found, once again, that no one array was under or overperforming.   
 
-![Array 1 Compared to Average](images/array_v_average.JPG)    
-
-**Nominal Operating Cell Temperature**    
-
-Halfway through the exploratory data analysis, we learned about the equation for Nominal Operating Cell Temperature, which can be used to predict the temperature of the solar cells and also analyze their overall efficiency.
-
-![NOCT Calculation](images/NOCT_calculation.JPG)
-
-Using this, in addition to finding out which variables were most important through a correlation heatmap, we were able to determine that the most important features for creating our model were:
-
-- DC Power (kW)
-- Ambient Temperature (C°)
-- Module Temperature (C°)
-- Solar Irradiation (W/m²)
 
 **Modeling**
+Nine different models were tried and test. Fine hyperparameter tuning on each of them was performed to obtain high coefficient of determination and low Mean Average Error and prevent overfitting of the training dataset. The data was split into 30% testing and 70% training. The nine models that were tested are as follows:
 
-This time around we tried three different models, and because we already had the equation to tell us exactly what our power output values should be, we had very good testing/train splits. The three models we tested were as follows:
+- **Lasso Regression:** This model introduced a new hyperparameter, alpha, the coefficient to penalize weights. The alpha chosen was 10 and cross validation was performed. 
 
-- **Linear Regression:** A simple, normalized linear regression with a test size of 0.25. This worked really well because many of the relationships between variables were already linear. With a high model score and a low Mean Absolute Error this looked like a great pick at first.
+- **Ridge Regression:** This model penalizes for the sum of squared value of the weights. Thus, the weights not only tend to have smaller absolute values, but also really tend to penalize the extremes of the weights, resulting in a group of weights that are more evenly distributed. After performing k-fold cross-validation fit to the trainining set, the optimal alpha obtained was 10. 
 
-- **Random Forest Model:** This model was imputed with the mean and with 12 estimators for our data pipeline. The results were underwhelming, with a much lower score than the linear regression and higher MAE.
+- **Elastic Net Regression:** The absolute value penalization and squared penalization are included in this model. The l1_ratio parameter(elastic net mixing parameter chosen was 0.95.
 
-- **Gradient Boosting:** Initially this model yielded a MAE of around -10, but with some improvements to the hyperparameters, notably increasing the number of trees to 70, we eventually got a great model score and an even lower MAE.
+- **Linear Regression:** This model is not penalized for its choice of weights therefore during the training stage, if the model feels like one particular feature is particularly important, the model will place a larger weight to that feature which may lead to overfitting. To our surprise, the model gave the same score as the ridge regression model. This maybe because some features are important than others in predicting C02 Emissions in the dataset given.
 
-To properly determine which model would most accurately predict the daily power output, we decided to make two random sets of data and compare each model against a control using the same random data. On the far left you'll see the "real" data, meaning what the power output should look like, and to the right you'll see how each model performed.
+- **Decision Tree Regression:** Grid Search was performed and the max_depth selected from this grid search was 12. 
+
+- **Random Forest Regression:** Random Search with cross validation was performed and the best parameters obtained for this model when performing hypertunig are:
+- {'n_estimators': 600,
+ 'min_samples_split': 2,
+ 'min_samples_leaf': 1,
+ 'max_features': 'sqrt',
+ 'max_depth': 100,
+ 'bootstrap': False}
+
+- **Gradient Boosting:** With this model, the best parameters we obtaine were maximum depth of 6 and number of estimater=200. 
+
+- **Support Vector Machine:** After performing gridsearch, the best parameters obtained for hyptertuning the model were:
+SVR(C=100, degree=2, epsilon=0.5, gamma=1, kernel='linear')
+
+- **K-Nearest Neighbors Regression:** Constructed an Elbow plot to determine the optimal value of K that yields lowest MSE. From the elbow plot, we deduced that the k-value of 7 yielded the lowest MSE.
+
+
 
 ![Model Performances](images/model_test.JPG)
 
