@@ -24,7 +24,7 @@ After analyzing this data we should be able to:
 
 Discover if there is any relationship between different features
 
-- Perform Exploratory Data Analysis to discover patterns,spot outliers, to test hypothesis and to check assumptions with the help of summary statistics   and graphical representations
+- Perform Exploratory Data Analysis to discover patterns,spot outliers, test hypothesis and check assumptions with the help of summary statistics and graphical representations
 - Analyze individual features and its impact on the model performance in predicting the CO2 Emissions.
 - Determine the best model for predicting the CO2 Emissions based on the model score
 
