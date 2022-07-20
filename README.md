@@ -1,5 +1,5 @@
 # Carbon-Dioxide-Emissions
-# ☀️ Carbon-Dioxide Prediction Model ⚡️
+# :earth_americas: Carbon-Dioxide Prediction Model :deciduous_tree:
 ## Data Science Project
 - For code go to [Notebooks](/notebooks)
 - For raw data go to [Data](/Data)
