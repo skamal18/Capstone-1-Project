@@ -4,6 +4,9 @@
 - For code go to [Notebooks](/notebooks)
 - For raw data go to [Data](/Data)
 
+![Co2-Emissions-From-Cars](https://user-images.githubusercontent.com/98712279/180068465-e0789668-f025-493a-b0ec-bf37e302548e.jpeg)
+
+
 **Problem Statement**   
 
 Carbon dioxide (CO2) is the primary greenhouse gas emitted through human activities. CO2 accounted for about 79% of all U.S. greenhouse gas emissions from human activities. A typical passenger vehicle emits about 4.6 metric tons of carbon dioxide per year. Every gallon of gasoline burned creates about 8,887 grams of CO2.
