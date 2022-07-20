@@ -22,7 +22,7 @@ After analyzing this data we should be able to:
 
 **Method**
 
--Discover if there is any relationship between different features
+Discover if there is any relationship between different features
 -Analyze individual features and its impact on the model performance in predicting the CO2 Emissions.
 -Determine the best model for predicting the CO2 Emissions based on the model score
 
