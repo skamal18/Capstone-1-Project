@@ -31,6 +31,10 @@ Discover if there is any relationship between different features
 
 ![CO2 Emissions](https://user-images.githubusercontent.com/98712279/179902500-b4addd4a-6607-4976-8465-3391d566c6ca.png)
 
+![Density1](https://user-images.githubusercontent.com/98712279/179903457-843149b8-53a9-428e-bbde-d66c0a48ad95.png)
+
+![KDE_Plot](https://user-images.githubusercontent.com/98712279/179903469-f2c385a2-bae6-41f8-a7f3-d046c4ac0671.png)
+
 No one array was dragging the power plant down, but to double check we compared each array to the average for each day and found, once again, that no one array was under or overperforming.   
 
 ![Array 1 Compared to Average](images/array_v_average.JPG)    
