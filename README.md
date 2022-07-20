@@ -65,34 +65,12 @@ Nine different models were tried and test. Fine hyperparameter tuning on each of
 SVR(C=100, degree=2, epsilon=0.5, gamma=1, kernel='linear')
 
 - **K-Nearest Neighbors Regression:** Constructed an Elbow plot to determine the optimal value of K that yields lowest MSE. From the elbow plot, we deduced that the k-value of 7 yielded the lowest MSE.
+![features_model](https://user-images.githubusercontent.com/98712279/180065245-b979ae74-2b43-420e-b83e-2934eba08318.png)
 
 
-
-![Model Performances](images/model_test.JPG)
-
-As you can see, the Gradient Boosting model was closest. To further verify this we made a new, much larger set of random data and compared the two again:
-
-![Model Larger Performances](images/model_large.JPG)
-
-The Gradient Boosting Model was the most accurate for predicting power output!
+![scores](https://user-images.githubusercontent.com/98712279/180064098-833adce3-9b59-4dc9-8ffa-99b496b41e17.png)
+The Gradient Boosting Model, Decision Tree Regression and Random Forest Regression were the most accurate for predicting Carbon Dioxide Emissions!
 
 **Conclusion**
 
-Using the model, we calculated the power output for the past 20 years in Gandikota, India using historical meteorological data. With this we were able to determine a good estimation for how much power the plant should generate in 2021: 
-
-![Predictions](images/model_predictions.JPG)
-
-To further validate our model and the importance of machine learning in general, we also calculated a "simple sum" of the plant's power output by taking the power it generated over ~31 days and multiplying it by 12. This graph shows the difference that machine learning can make in prediction models: 
-
-![Machine Learning Performance](images/simple_sum.JPG)
-
-The last thing we tested was how much extra power the Gandikota plant could generate by upgrading its solar arrays. While analyzing, we determine the arrays currently have a NOCT value around 18, while industry average is around 48 today. I replaced the plant's NOCT to see how big of a difference it would make:
-
-![Upgrade](images/upgrade.JPG)
-
-If the Gandikota power plant upgraded they would generate an additional:
-
-- 191,388,153.45 kW/hrs
-- $6,315,809.06 in revenue
-
-in just one year after upgrading. I recommend that the Gandikota Solar Power Plant invests into upgrading their arrays so that they can improve overall efficiency and generate more revenue for better salaries, expansion opportunities and more green energy!
+Using the best model, we calculated the carbon dioxide emissions for the car vehicles based on transmission, fuel type, engine size and the number of cylinders. With this we were able to determine a good prediction model for carbon dioxide emissions based on these features. This model could be further improved by incorporating other car features such as horsepower, car weight and other factors that affect the fuel consumption in a car.
