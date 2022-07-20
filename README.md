@@ -29,8 +29,7 @@ Discover if there is any relationship between different features
 - Determine the best model for predicting the CO2 Emissions based on the model score
 
 
-
-![Arrays](/images/arrays_ind.JPG)    
+![CO2 Emissions](https://user-images.githubusercontent.com/98712279/179902500-b4addd4a-6607-4976-8465-3391d566c6ca.png)
 
 No one array was dragging the power plant down, but to double check we compared each array to the average for each day and found, once again, that no one array was under or overperforming.   
 
