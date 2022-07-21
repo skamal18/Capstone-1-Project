@@ -8,7 +8,8 @@
 
 **Problem Statement**   
 
-Carbon dioxide (CO2) is the primary greenhouse gas emitted through human activities. CO2 accounted for about 79% of all U.S. greenhouse gas emissions from human activities. A typical passenger vehicle emits about 4.6 metric tons of carbon dioxide per year. Every gallon of gasoline burned creates about 8,887 grams of CO2.
+The transportation sector in Canada is a significant emitter of GHGs. According to Environment Canada, transportation was responsible for 27% (200,000 kt of CO2 eq) of the total GHG emissions (747,000 kt of CO2 eq). Road transportation accounted for 69% (137,000 kt of CO2 eq) of the GHG emissions within the sector. 
+In light of the fact that this sector plays such a large role in total emissions, it is important to have some key statistics to measure emissions. Estimates by type of fuel, mode of transportation and the purpose of vehicle use are examples of data that would be useful in informing policy decisions. 
 
 This project aims to predict the Carbon Dioxide emissions from cars based on their features such as engine size(L),number of cylinders, fuel type,fuel consumption, transmission type, make and model. A regression model will be developed to predict the emissions based on the most important/relevant features selected from the dataset.
 
@@ -61,7 +62,7 @@ Nine different models were tried and test. Fine hyperparameter tuning on each of
  'max_depth': 100,
  'bootstrap': False}
 
-- **Gradient Boosting:** With this model, the best parameters we obtaine were maximum depth of 6 and number of estimater=200. 
+- **Gradient Boosting:** With this model, the best parameters we obtained were maximum depth of 6 and number of estimater=200. 
 
 - **Support Vector Machine:** After performing gridsearch, the best parameters obtained for hyptertuning the model were:
 SVR(C=100, degree=2, epsilon=0.5, gamma=1, kernel='linear')
