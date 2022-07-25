@@ -42,7 +42,7 @@ Ethanol has the lowest CO2 Emissions in comparison to other fuel types and highe
 
 
 **Modeling**
-Nine different models were tried and test. Fine hyperparameter tuning on each of them was performed to obtain high coefficient of determination and low Mean Average Error and prevent overfitting of the training dataset. The data was split into 30% testing and 70% training. The nine models that were tested are as follows:
+Nine different models were tried and test. Fine hyperparameter tuning on each of them was performed to obtain high coefficient of determination and low Mean Absolute Error and prevent overfitting of the training dataset. The data was split into 30% testing and 70% training. The nine models that were tested are as follows:
 
 - **Lasso Regression:** This model introduced a new hyperparameter, alpha, the coefficient to penalize weights. The alpha chosen was 10 and cross validation was performed. 
 
