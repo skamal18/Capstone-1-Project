@@ -62,10 +62,10 @@ Nine different models were tried and test. Fine hyperparameter tuning on each of
  'max_depth': 100,
  'bootstrap': False}
 
-- **Gradient Boosting:** With this model, the best parameters we obtained were maximum depth of 6 and number of estimater=200. 
+- **Gradient Boosting:** With this model, the best parameters we obtained were maximum depth of 4 and number of estimater=500. 
 
 - **Support Vector Machine:** After performing gridsearch, the best parameters obtained for hyptertuning the model were:
-SVR(C=100, degree=2, epsilon=0.5, gamma=1, kernel='linear')
+SVR(C=200, degree=3, epsilon=0.5, kernel='poly')
 
 
 ![features_model](https://user-images.githubusercontent.com/98712279/180065245-b979ae74-2b43-420e-b83e-2934eba08318.png)
